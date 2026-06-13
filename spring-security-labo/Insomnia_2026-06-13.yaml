@@ -1,0 +1,188 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: My Collection
+meta:
+  id: wrk_17152461ced64c7f962fbaa0d0198e31
+  created: 1777406880579
+  modified: 1781381919458
+  description: ""
+collection:
+  - url: http://localhost:8080/api/auth/signup
+    name: New Request
+    meta:
+      id: req_2b8e994e0df64a99a5d518a26b5b851d
+      created: 1781381936180
+      modified: 1781383224656
+      isPrivate: false
+      description: ""
+      sortKey: -1781381936180
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "guillermo",
+          "name": "Guillermo",
+          "surname": "Perez",
+          "email": "guillermo@gmail.com",
+          "password": "MiPassword123!"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/auth/login
+    name: New Request
+    meta:
+      id: req_a37bbf20fde8414cbcc5b3bc92477933
+      created: 1781382059362
+      modified: 1781383238174
+      isPrivate: false
+      description: ""
+      sortKey: -1781382059362
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "guillermo",
+          "password": "NuevaPassword123!"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/auth/profile
+    name: New Request
+    meta:
+      id: req_15f74c02a2384c3b8f969cfdde20782f
+      created: 1781382173964
+      modified: 1781382318787
+      isPrivate: false
+      description: ""
+      sortKey: -1781382173964
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlsbGVybW8iLCJpZCI6MSwiaWF0IjoxNzgxMzgxOTY0LCJleHAiOjE3ODEzODU1NjR9.CMRtx6xFZPWgj1N07XwFFlKDuN-tm01j9YrwZhVa8_M
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/auth/update/profile
+    name: New Request
+    meta:
+      id: req_4d1414b9c0304039947428c2f8d61209
+      created: 1781382413551
+      modified: 1781382845101
+      isPrivate: false
+      description: ""
+      sortKey: -1781382413551
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "guillermooo",
+          "name": "Guillermo Actualizado",
+          "surname": "Perez Actualizado",
+          "email": "guillermo2@gmail.com"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlsbGVybW8iLCJpZCI6MSwiaWF0IjoxNzgxMzgxOTY0LCJleHAiOjE3ODEzODU1NjR9.CMRtx6xFZPWgj1N07XwFFlKDuN-tm01j9YrwZhVa8_M
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/auth/update/password
+    name: New Request
+    meta:
+      id: req_cf600fecf69e45ad91c6022fc761d5da
+      created: 1781382525075
+      modified: 1781383228427
+      isPrivate: false
+      description: ""
+      sortKey: -1781382525075
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "oldPassword": "MiPassword123!",
+          "newPassword": "NuevaPassword123!",
+          "confirmPassword": "NuevaPassword123!"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlsbGVybW8iLCJpZCI6MiwiaWF0IjoxNzgxMzgyODc0LCJleHAiOjE3ODEzODY0NzR9.kcdtAp4cLA3VQ9NsRSUzcyMhVZqy7WuLIoKVJZ6l3rU
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_6496707f1c6668e780930e0b56f29cae8b088d8e
+    created: 1781381919660
+    modified: 1781381919660
+environments:
+  name: Base Environment
+  meta:
+    id: env_6496707f1c6668e780930e0b56f29cae8b088d8e
+    created: 1777406880587
+    modified: 1781381919457
+    isPrivate: false
